@@ -66,7 +66,7 @@ def UI():
     dic = LinksSaver(Topics)
     Themes = list(dic.keys())
     
-    Answers = []
+    Answers = [] # Store the answers in a list
     
     for Theme in Themes:
         while True:  # Loop until a valid answer is provided
@@ -80,7 +80,7 @@ def UI():
     return Answers
             
 def Questionnaire():
-    Answers = UI() # Get the return value of UI()
+    Answers = UI() 
     Topics = LinkScanner()
     dic = LinksSaver(Topics)
     InfosToSend = []
@@ -152,7 +152,7 @@ def Mail():
     # Connect to the SMTP server
     server = smtplib.SMTP(smtp_server, smtp_port)
     server.starttls()  # Secure the connection
-    server.login('newsletterpython13@gmail.com', 'dias vsgw zokr whsv')
+    server.login('newsletterpython13@gmail.com', 'dias vsgw zokr whsv') # Mail and key password coming from Gmail account
 
     # Send the email
     server.send_message(msg)
